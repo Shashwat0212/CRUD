@@ -3,12 +3,10 @@ package net.java.springboot.controller;
 import net.java.springboot.model.Employee;
 import net.java.springboot.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+//its allows all origins, all headers, and the HTTP methods specified in the @RequestMapping annotation
 @CrossOrigin("*")
 //allows the class to handle the requests made by the client.REST stands for representational state transfer
 @RestController
@@ -23,4 +21,12 @@ public class EmployeeController {
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
     }
+    //build and create employee rest api
+    @PostMapping
+//    maps HTTP POST requests onto specific handler methods.
+//    request body converts the json incoming file to java object
+    public Employee createEmployee(@RequestBody Employee employee){
+        return employeeRepository.save(employee);
+    }
+
 }

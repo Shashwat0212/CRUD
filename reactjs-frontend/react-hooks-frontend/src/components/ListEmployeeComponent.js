@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import EmployeeService from "../services/EmployeeService";
-
+import { Link } from "react-router-dom";
 const ListEmployeeComponent = () => {
   const [employees, setEmployees] = useState([]);
   useEffect(() => {
@@ -19,6 +19,9 @@ const ListEmployeeComponent = () => {
   return (
     <div className="container">
       <h2 className="text-center"> List Employees </h2>
+      <Link to="/add-employee" className="btn btn-primary mb-2">
+        Add Employee chapter 13
+      </Link>
       <table className="table table-bordered table-striped">
         <thead>
           <tr>
@@ -33,7 +36,7 @@ const ListEmployeeComponent = () => {
             <tr key={employee.id}>
               <td> {employee.Id}</td>
               <td> {employee.firstName}</td>
-              <td> {employee.lastname}</td>
+              <td> {employee.lastName}</td>
               <td> {employee.emailId}</td>
             </tr>
           ))}
