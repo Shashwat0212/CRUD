@@ -1,11 +1,14 @@
 package net.java.springboot.controller;
 
+import net.java.springboot.exception.ResourceNotFoundException;
 import net.java.springboot.model.Employee;
 import net.java.springboot.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 //its allows all origins, all headers, and the HTTP methods specified in the @RequestMapping annotation
 @CrossOrigin("*")
 //allows the class to handle the requests made by the client.REST stands for representational state transfer
@@ -21,12 +24,20 @@ public class EmployeeController {
     public List<Employee> getAllEmployees() {
         return employeeRepository.findAll();
     }
+
     //build and create employee rest api
     @PostMapping
 //    maps HTTP POST requests onto specific handler methods.
 //    request body converts the json incoming file to java object
-    public Employee createEmployee(@RequestBody Employee employee){
+    public Employee createEmployee(@RequestBody Employee employee) {
         return employeeRepository.save(employee);
+    }
+
+    //    build get employee by id rest api
+    @GetMapping("{id}")
+    public ResponseEntity<Employee> getEmployeeById(@PathVariable long id) {
+        Employee employee = employeeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Employee not exist with id : " + id));
+        return ResponseEntity.ok(employee);
     }
 
 }

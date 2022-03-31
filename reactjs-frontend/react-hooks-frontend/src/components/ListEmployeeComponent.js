@@ -20,7 +20,7 @@ const ListEmployeeComponent = () => {
     <div className="container">
       <h2 className="text-center"> List Employees </h2>
       <Link to="/add-employee" className="btn btn-primary mb-2">
-        Add Employee chapter 13
+        Add Employee
       </Link>
       <table className="table table-bordered table-striped">
         <thead>
