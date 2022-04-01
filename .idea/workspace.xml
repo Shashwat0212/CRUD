@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="981f5f2b-4a95-44a0-b244-a02b024459a3" name="Changes" comment="Rest api done and connected next we'll do the add employee" />
+    <list default="true" id="981f5f2b-4a95-44a0-b244-a02b024459a3" name="Changes" comment="till rest api to update employee done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs-frontend/react-hooks-frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs-frontend/react-hooks-frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs-frontend/react-hooks-frontend/src/components/AddEmployeeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs-frontend/react-hooks-frontend/src/components/AddEmployeeComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs-frontend/react-hooks-frontend/src/components/ListEmployeeComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs-frontend/react-hooks-frontend/src/components/ListEmployeeComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reactjs-frontend/react-hooks-frontend/src/services/EmployeeService.js" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs-frontend/react-hooks-frontend/src/services/EmployeeService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-backend/src/main/java/net/java/springboot/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-backend/src/main/java/net/java/springboot/controller/EmployeeController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648560805567</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="till rest api to update employee done">
+      <created>1648723723689</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648723723689</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -139,6 +153,7 @@
     <MESSAGE value="refreshed" />
     <MESSAGE value="database configured and ready for frontend" />
     <MESSAGE value="Rest api done and connected next we'll do the add employee" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rest api done and connected next we'll do the add employee" />
+    <MESSAGE value="till rest api to update employee done" />
+    <option name="LAST_COMMIT_MESSAGE" value="till rest api to update employee done" />
   </component>
 </project>
